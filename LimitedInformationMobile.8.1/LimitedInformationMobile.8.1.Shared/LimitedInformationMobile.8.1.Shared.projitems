@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f86a5e98-c5e2-4872-9d75-f4c51ca57585</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>LimitedInformationMobile._8._1</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Decks\Deck.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Decks\DeckComparer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Decks\DeckDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\Result.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Players\ByePlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Players\CalculatedPlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Players\IBasePlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Players\IHasOdds.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Players\IProjectPoints.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Players\SimulatedPlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)POCOs\CalculatedDrawState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)POCOs\CalculatedMatchRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)POCOs\Day.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)POCOs\PlayerResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)POCOs\SimulatedDrawState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)POCOs\SimulatedMatchRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tournaments\CalculatedTournament.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tournaments\ITournament.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tournaments\SimulatedTournament.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tournaments\TournamentFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\ArraySorter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\NumberToOrdinal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\PlayerPairer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\PlayerSorter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\RandomData.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\SampleData.json" />
+  </ItemGroup>
+</Project>

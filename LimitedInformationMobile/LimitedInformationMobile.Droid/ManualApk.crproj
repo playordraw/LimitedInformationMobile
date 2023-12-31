@@ -1,0 +1,46 @@
+<project outputDir="Confused" baseDir="obj\ObsfucatedRelease\assemblies\" seed="31415926" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" preset="none">
+  </rule>
+  <module path="LimitedInformationMobile.dll">
+    <rule pattern="true" inherit="true">
+      <protection id="anti ildasm" action="remove" />
+      <protection id="invalid metadata" action="remove" />
+      <protection id="anti tamper" action="remove" />
+      <protection id="anti dump" action="remove" />
+      <protection id="resources" action="remove" />
+      <protection id="constants" />
+      <protection id="ctrl flow" />
+      <protection id="anti debug" />
+      <protection id="ref proxy" />
+      <protection id="rename" />
+    </rule>
+  </module>
+  <module path="Top8Library111.dll">
+    <rule pattern="true" preset="none">
+      <protection id="anti ildasm" action="remove" />
+      <protection id="invalid metadata" action="remove" />
+      <protection id="anti tamper" action="remove" />
+      <protection id="anti dump" action="remove" />
+      <protection id="constants" />
+      <protection id="ctrl flow" />
+      <protection id="anti debug" />
+      <protection id="ref proxy" />
+      <protection id="resources" />
+      <protection id="rename" />
+    </rule>
+  </module>
+  <module path="ViewModel111.dll">
+    <rule pattern="true" preset="none">
+      <protection id="anti ildasm" action="remove" />
+      <protection id="invalid metadata" action="remove" />
+      <protection id="anti tamper" action="remove" />
+      <protection id="anti dump" action="remove" />
+      <protection id="rename" action="remove" />
+      <protection id="constants" />
+      <protection id="ctrl flow" />
+      <protection id="anti debug" />
+      <protection id="ref proxy" />
+      <protection id="resources" />
+    </rule>
+  </module>
+</project>

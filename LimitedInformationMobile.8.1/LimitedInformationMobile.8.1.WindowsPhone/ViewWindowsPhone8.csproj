@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB510680-2251-4690-8C4D-8C87BA20581C}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Top8Calc.Views</RootNamespace>
+    <AssemblyName>Top8CalcWinPhone81</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+    <AppxBundle>Always</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ObsfucatedRelease|AnyCPU'">
+    <OutputPath>bin\ObsfucatedRelease\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ObsfucatedRelease|ARM'">
+    <OutputPath>bin\ARM\ObsfucatedRelease\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ObsfucatedRelease|x86'">
+    <OutputPath>bin\x86\ObsfucatedRelease\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="HubPage.xaml.cs">
+      <DependentUpon>HubPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Top8Calculator.xaml.cs">
+      <DependentUpon>Top8Calculator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Top8Simulator.xaml.cs">
+      <DependentUpon>Top8Simulator.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\BadgeLogo.scale-100.png">
+      <Link>Assets\BadgeLogo.scale-100.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\BadgeLogo.scale-140.png">
+      <Link>Assets\BadgeLogo.scale-140.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\BadgeLogo.scale-240.png">
+      <Link>Assets\BadgeLogo.scale-240.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\Banner.jpg">
+      <Link>Assets\Banner.jpg</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\Logo.scale-100.png">
+      <Link>Assets\Logo.scale-100.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\Logo.scale-140.png">
+      <Link>Assets\Logo.scale-140.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\Logo.scale-240.png">
+      <Link>Assets\Logo.scale-240.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\SmallLogo.scale-100.png">
+      <Link>Assets\SmallLogo.scale-100.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\SmallLogo.scale-140.png">
+      <Link>Assets\SmallLogo.scale-140.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\SmallLogo.scale-240.png">
+      <Link>Assets\SmallLogo.scale-240.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\SplashScreen.scale-100.png">
+      <Link>Assets\SplashScreen.scale-100.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\SplashScreen.scale-140.png">
+      <Link>Assets\SplashScreen.scale-140.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\SplashScreen.scale-240.png">
+      <Link>Assets\SplashScreen.scale-240.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\Square71x71Logo.scale-100.png">
+      <Link>Assets\Square71x71Logo.scale-100.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\Square71x71Logo.scale-140.png">
+      <Link>Assets\Square71x71Logo.scale-140.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\Square71x71Logo.scale-240.png">
+      <Link>Assets\Square71x71Logo.scale-240.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\StoreLogo.scale-100.png">
+      <Link>Assets\StoreLogo.scale-100.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\StoreLogo.scale-140.png">
+      <Link>Assets\StoreLogo.scale-140.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\StoreLogo.scale-240.png">
+      <Link>Assets\StoreLogo.scale-240.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\WideLogo.scale-100.png">
+      <Link>Assets\WideLogo.scale-100.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\WideLogo.scale-140.png">
+      <Link>Assets\WideLogo.scale-140.png</Link>
+    </Content>
+    <Content Include="..\..\LimitedInformationMobile\LimitedInformationMobile\Images\WideLogo.scale-240.png">
+      <Link>Assets\WideLogo.scale-240.png</Link>
+    </Content>
+    <Content Include="Assets\HubBackground.theme-dark.png" />
+    <Content Include="Assets\HubBackground.theme-light.png" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="StoreManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="HubPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Top8Calculator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Top8Simulator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ViewModel32\ViewModel32.csproj">
+      <Project>{5ab8a65f-8e72-4eca-a331-39af22a0b63c}</Project>
+      <Name>ViewModel32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+  </ItemGroup>
+  <Import Project="..\..\ViewShared\ViewShared.projitems" Label="Shared" />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Target Name="Obfuscate2" Condition="'$(Configuration)' == 'ObsfucatedRelease'" AfterTargets="_CreatePackageLayout">
+    <PropertyGroup>
+      <__PsInvokeCommand>powershell "Invoke-Command</__PsInvokeCommand>
+      <__BlockBegin>-ScriptBlock { $errorActionPreference='Stop';</__BlockBegin>
+      <__BlockEnd>; exit $LASTEXITCODE }</__BlockEnd>
+      <_PsCmdStart>$(__PsInvokeCommand) $(__BlockBegin)</_PsCmdStart>
+      <_PsCmdEnd>$(__BlockEnd)"</_PsCmdEnd>
+      <ObsProfile>Obfuscate.crproj</ObsProfile>
+      <ScriptLocation>Set-ExecutionPolicy Unrestricted -scope process -force;.\Obfuscate.ps1</ScriptLocation>
+    </PropertyGroup>
+    <Exec IgnoreStandardErrorWarningFormat="true" Command="$(_PsCmdStart)$(ScriptLocation) -intDir $(AppxLayoutDir) -crproj $(ObsProfile)$(_PsCmdEnd)" />
+    <Message Text="Obfuscating" Importance="normal" />
+  </Target>
+</Project>

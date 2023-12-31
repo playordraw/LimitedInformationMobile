@@ -1,0 +1,99 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+     License, v. 2.0. If a copy of the MPL was not distributed with this
+     file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+     File: Top8Calc.xaml
+
+     Copyright (c) 2023 Jeffrey Reynolds
+-->
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="Top8CalcBc"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ViewModel.ViewModels;assembly=ViewModel111"
+             xmlns:converters="clr-namespace:ViewModel.Converters;assembly=ViewModel111"
+             x:Class="LimitedInformationMobile.Views.Top8Calc"
+             >
+
+  <ContentPage.BindingContext>
+    <viewModels:Top8CalcViewModel />
+  </ContentPage.BindingContext>
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:PlaceToOrdinalSuffixConverter x:Key="PlaceConverter" />
+      <converters:PlaceToBackgroundColorConverter x:Key="PlaceToColorConverter" />
+      <converters:PlaceToForegroundColorConverter x:Key="PlaceToForegroundColorConverter" />
+      <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+
+    <Label  Grid.Row="0"                  Grid.Column="0" VerticalTextAlignment="Center" Text="Players: " />
+    <Entry  Grid.Row="0"                  Grid.Column="1" Keyboard="Numeric" Placeholder="#Players" Text="{Binding Players, Mode=OneWayToSource}" />
+    <Label  Grid.Row="1"                  Grid.Column="0" VerticalTextAlignment="Center" Text="Rounds: " />
+    <Entry  Grid.Row="1"                  Grid.Column="1" Keyboard="Numeric" Placeholder="#Rounds" Text="{Binding Rounds, Mode=OneWayToSource}" />
+    <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Text="Run!" Command="{Binding RunCommand}" IsEnabled="{Binding RunCanExecute, Mode=OneWay}" />
+    <StackLayout Grid.Row="0" Grid.RowSpan="2" Grid.Column="3" Orientation="Vertical" Spacing="0" HorizontalOptions="Center">
+      <Label VerticalTextAlignment="Center" Text="Draw into top 8"  HorizontalTextAlignment="Center" />
+      <Switch VerticalOptions="Center" IsToggled="{Binding IncludeDraws, Mode=TwoWay}" HorizontalOptions="CenterAndExpand"/>
+    </StackLayout>
+
+    <ListView x:Name="ListView" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding Results}" HasUnevenRows="True" RowHeight="-1" IsVisible="{Binding Results, Converter={StaticResource NullToVisibilityConverter}}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid x:Name="Grid" BackgroundColor="{Binding Path=Place, Converter={StaticResource PlaceToColorConverter}, ConverterParameter={x:Reference ListView}}">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Grid.Resources>
+                <ResourceDictionary>
+                  <Style TargetType="Label">
+                    <Setter Property="TextColor"
+                            Value="{Binding Path=BackgroundColor, Source={x:Reference Grid}, Converter={StaticResource PlaceToForegroundColorConverter}}" />
+                  </Style>
+                </ResourceDictionary>
+              </Grid.Resources>
+
+              <Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" FormattedText="{Binding Place, Converter={StaticResource PlaceConverter}}" VerticalTextAlignment="End" />
+              <Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Text="{Binding Points}" FontSize="25" VerticalTextAlignment="End" HorizontalTextAlignment="End" />
+              <Label Grid.Row="0"                  Grid.Column="2" Text="W:" />
+              <Label Grid.Row="0"                  Grid.Column="3" Text="{Binding Wins}" />
+              <Label Grid.Row="0"                  Grid.Column="4" Text="L:"/>
+              <Label Grid.Row="0"                  Grid.Column="5" Text="{Binding Losses}"/>
+              <Label Grid.Row="0"                  Grid.Column="6" Text="D:"              IsVisible="{Binding Source={x:Reference Top8CalcBc}, Path=BindingContext.StaticIncludeDraws}" />
+              <Label Grid.Row="0"                  Grid.Column="7" Text="{Binding Draws}" IsVisible="{Binding Source={x:Reference Top8CalcBc}, Path=BindingContext.StaticIncludeDraws}" />
+              <Label Grid.Row="1"                  Grid.Column="2" Grid.ColumnSpan="5" Text="Points" HorizontalTextAlignment="Start" VerticalTextAlignment="End"/>
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+    </ListView>
+  </Grid>
+
+
+</ContentPage>

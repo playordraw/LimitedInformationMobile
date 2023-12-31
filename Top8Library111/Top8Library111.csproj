@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03ADA86E-9D13-4EB6-95EA-C050CD44DD88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Top8Library</RootNamespace>
+    <AssemblyName>Top8Library111</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Lib111</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ObsfucatedRelease|AnyCPU'">
+    <OutputPath>bin\ObsfucatedRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\..\mathnet-numerics\src\Numerics\Numerics-Portable111.csproj">
+      <Project>{c3219166-f2c0-4f0d-9928-6d8d0884dd3d}</Project>
+      <Name>Numerics-Portable111</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Top8LibraryShared\Decks\Deck.cs">
+      <Link>Decks\Deck.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Decks\DeckComparer.cs">
+      <Link>Decks\DeckComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Decks\DeckDatabase.cs">
+      <Link>Decks\DeckDatabase.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Enums\Result.cs">
+      <Link>Enums\Result.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Players\ByePlayer.cs">
+      <Link>Players\ByePlayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Players\CalculatedPlayer.cs">
+      <Link>Players\CalculatedPlayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Players\IBasePlayer.cs">
+      <Link>Players\IBasePlayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Players\IHasOdds.cs">
+      <Link>Players\IHasOdds.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Players\IProjectPoints.cs">
+      <Link>Players\IProjectPoints.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Players\SimulatedByePlayer.cs">
+      <Link>Players\SimulatedByePlayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Players\SimulatedPlayer.cs">
+      <Link>Players\SimulatedPlayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\POCOs\CalculatedMatchRecord.cs">
+      <Link>POCOs\CalculatedMatchRecord.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\POCOs\Day.cs">
+      <Link>POCOs\Day.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\POCOs\PlayerResult.cs">
+      <Link>POCOs\PlayerResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\POCOs\SimulatedDrawState.cs">
+      <Link>POCOs\SimulatedDrawState.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\POCOs\SimulatedMatchRecord.cs">
+      <Link>POCOs\SimulatedMatchRecord.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Tournaments\CalculatedTournament.cs">
+      <Link>Tournaments\CalculatedTournament.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\POCOs\CalculatedDrawState.cs">
+      <Link>POCOs\CalculatedDrawState.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Tournaments\ITournament.cs">
+      <Link>Tournaments\ITournament.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Tournaments\SimulatedTournament.cs">
+      <Link>Tournaments\SimulatedTournament.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Tournaments\TournamentFactory.cs">
+      <Link>Tournaments\TournamentFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Utility\ArraySorter.cs">
+      <Link>Utility\ArraySorter.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Utility\ExtensionMethods.cs">
+      <Link>Utility\ExtensionMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Utility\NumberToOrdinal.cs">
+      <Link>Utility\NumberToOrdinal.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Utility\PlayerPairer.cs">
+      <Link>Utility\PlayerPairer.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Utility\PlayerSorter.cs">
+      <Link>Utility\PlayerSorter.cs</Link>
+    </Compile>
+    <Compile Include="..\Top8LibraryShared\Utility\RandomData.cs">
+      <Link>Utility\RandomData.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Random.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

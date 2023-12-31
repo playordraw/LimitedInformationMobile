@@ -1,0 +1,12 @@
+<project outputDir="C:\Development\LimitedInformationMobile\LimitedInformationMobile\LimitedInformationMobile.Droid\bin\ObsfucatedRelease\Confused" baseDir="C:\Development\LimitedInformationMobile\LimitedInformationMobile\LimitedInformationMobile.Droid\bin\ObsfucatedRelease" seed="31415926" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" preset="aggressive" />
+  <module path="LimitedInformationMobile.dll">
+    <rule pattern="true" preset="normal" inherit="false"/>
+  </module>
+  <module path="Top8Library111.dll">
+    <rule pattern="true" />
+  </module>
+  <module path="ViewModel111.dll">	
+    <rule pattern="true" />
+  </module>
+</project>

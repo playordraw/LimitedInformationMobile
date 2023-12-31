@@ -1,0 +1,26 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+     License, v. 2.0. If a copy of the MPL was not distributed with this
+     file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+     File: Top8Simulator.xaml
+
+     Copyright (c) 2023 Jeffrey Reynolds
+-->
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage    x:Name="Top8Sim" 
+                xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:viewModels="clr-namespace:ViewModel.ViewModels;assembly=ViewModel111"
+                xmlns:converters="clr-namespace:ViewModel.Converters;assembly=ViewModel111"
+                x:Class="LimitedInformationMobile.Views.Top8Simulator">
+
+    <ContentPage.BindingContext>
+        <viewModels:Top8SimulatorViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin Forms!" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

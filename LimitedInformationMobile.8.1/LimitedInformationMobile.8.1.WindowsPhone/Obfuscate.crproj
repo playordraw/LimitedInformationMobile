@@ -1,0 +1,22 @@
+<project outputDir="Confused" baseDir="obj\ARM\ObsfucatedRelease\PackageLayout\" seed="31415926" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" preset="none">
+    <protection id="constants" action="remove" />
+    <protection id="ctrl flow" />
+    <protection id="ref proxy" />
+    <protection id="rename" />
+  </rule>
+  <module path="Top8CalcWinPhone81.exe">
+    <rule pattern="true" preset="none" inherit="true">
+      <protection id="ref proxy" action="remove" />
+      <protection id="rename" action="remove" />
+    </rule>
+  </module>
+  <module path="Top8Library32.dll">
+    <rule pattern="true" preset="none" inherit="true" />
+  </module>
+  <module path="ViewModel32.dll">
+    <rule pattern="true" preset="none" inherit="true" />
+  </module>
+  <probePath>C:\Program Files (x86)\Windows Phone Kits\8.1\References\CommonConfiguration\Neutral</probePath>
+  <probePath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore</probePath>
+</project>

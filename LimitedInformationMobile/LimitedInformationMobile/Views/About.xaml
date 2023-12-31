@@ -1,0 +1,30 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+     License, v. 2.0. If a copy of the MPL was not distributed with this
+     file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+     File: About.xaml
+
+     Copyright (c) 2023 Jeffrey Reynolds
+-->
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LimitedInformationMobile.Views.About">
+  <StackLayout Orientation="Vertical">
+    <Image Source="Banner.jpg" />
+    <Label>
+      This is an application that makes an educated guess of what the final standing will be at the end of a Swiss style tournament. The results of the program are intended to be a guideline of what win records will make it into the top eight.
+      
+    </Label>
+    <Label>
+      Top 8 Calculator is a static analysis of a tournament without regard to random events. It also assumes, when a player is paired with another player with less points, the one with the most points wins.
+      The results will always be the same for the same inputs.
+      With the "Allow Draws" option checked (default) the calculator will attempt to determine when a player should draw intentionally. With the option unchecked the tournament will play out without any draws (i.e. like in MTGO).
+      
+    </Label>
+    <Label>
+      Top 8 Simulator (NYI) is a counterpoint to the Top 8 Calculator. It actually runs through an entire tournament the specified number of times, where the results are not predetermined, and gives you the average results.
+      
+    </Label>
+  </StackLayout>
+</ContentPage>
